@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M.ANANDHA MURUGAN | Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Header / Navbar ======= -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo"><a href="index.html">M.ANANDHA MURUGAN</span></a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======= Hero Section ======= -->
+  <section class="hero">
+    <div class="container hero-content">
+      <img src="assets/img/avatar.jpg" alt="Profile Photo" class="profile-photo" data-aos="zoom-in" data-aos-duration="1000">
+      <div>
+        <h2 data-aos="fade-right" data-aos-delay="200">Hi, I'm <span>M.ANANDHA MURUGAN</span></h2>
+        <p data-aos="fade-right" data-aos-delay="300">A passionate <strong>AI ENGINEER</strong> with expertise in web development and modern technologies also Web Developer | Designer | Problem Solver</p>
+        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+          <a href="#resume" class="btn primary">View Resume</a>
+          <a href="assets/docs/resume.pdf" download class="btn secondary">Download Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="year"></span> M. ANANDHA MURUGAN. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+    });
+ 
+    // Auto update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

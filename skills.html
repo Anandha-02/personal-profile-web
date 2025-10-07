@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills | M. ANANDHA MURUGAN</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ======= Header / Navbar ======= -->
+  <header>
+    <div class="container nav-container">
+      <h1 class="logo"><a href="index.html">M. ANANDHA<span>MURUGAN</span></a></h1>
+      <nav>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <p>Here are some of the technologies I work with:</p>
+        <ul class="skills-list">
+          <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript (ES6+)</li>
+          <li>C / C++</li>
+          <li>HTML5 & CSS3</li>
+        </ul>
+      </div>
+      
+      <div class="skill-category">
+        <h3>Web Development</h3>
+        <ul>
+          <li>React.js, Node.js</li>
+          <li>RESTful APIs</li>
+          <li>Responsive Web Design</li>
+          <li>Bootstrap, Tailwind CSS</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>AI & Machine Learning</h3>
+        <ul>
+          <li>Data Preprocessing & Visualization</li>
+          <li>Scikit-learn, TensorFlow, Pandas, NumPy</li>
+          <li>Model Training & Evaluation</li>
+          <li>Time Series Analysis, Classification & Regression</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>VS Code, Jupyter Notebook</li>
+          <li>MySQL, Firebase</li>
+          <li>Linux / Windows Environments</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="year"></span> M. ANANDHA MURUGAN. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Auto update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
