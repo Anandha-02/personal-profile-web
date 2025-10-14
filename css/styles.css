@@ -21,10 +21,10 @@
 /* Root Variables — Easy Theming */
 :root {
   --primary-color: #2563eb;   /* Blue */
-  --secondary-color: #1e293b; /* Dark gray-blue */
+  --secondary-color: #f0f0ff; /* Light lavender for text on dark bg */
   --background-color: #f8fafc;
-  --text-color: #1e293b;
-  --light-text: #64748b;
+  --text-color: #ffffff;      /* White text for dark bg */
+  --light-text: #e0e0ff;     /* Lighter lavender for secondary text */
   --max-width: 1100px;
   --border-radius: 12px;
   --transition-speed: 0.3s;
@@ -40,9 +40,26 @@
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--background-color);
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-attachment: fixed;
   color: var(--text-color);
   line-height: 1.6;
+}
+
+/* Optional: Add a soft overlay to make text stand out */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* transparent dark layer */
+  z-index: -1;
+}
+
+main {
+  flex-grow: 1;
 }
 
 img {
@@ -63,7 +80,7 @@ ul {
    🧭 Navbar
    ========================= */
 header {
-  background: #ffffffcc;
+  background: rgba(22, 22, 36, 0.8);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
@@ -82,7 +99,7 @@ header {
 
 .navbar h1 {
   font-size: 1.5rem;
-  color: var(--primary-color);
+  color: #fff;
   font-weight: 700;
 }
 
@@ -93,11 +110,12 @@ header {
 
 .nav-links a {
   font-weight: 500;
+  color: #f0f0ff;
   transition: color var(--transition-speed);
 }
 
 .nav-links a:hover {
-  color: var(--primary-color);
+  color: #fff;
 }
 
 /* =========================
@@ -110,7 +128,7 @@ header {
   justify-content: center;
   text-align: center;
   padding: 5rem 1rem;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: transparent;
   color: #fff;
 }
 
@@ -153,7 +171,9 @@ header {
 section {
   max-width: var(--max-width);
   margin: 4rem auto;
-  padding: 0 1rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
 }
 
 section h2 {
@@ -192,10 +212,11 @@ section h2 {
 }
 
 .project-card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  color: #fff;
 }
 
 .project-card:hover {
@@ -215,6 +236,7 @@ section h2 {
 .project-card h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  color: var(--secondary-color);
 }
 
 .project-card p {
@@ -279,10 +301,10 @@ section h2 {
    🦶 Footer
    ========================= */
 footer {
-  background: #f8f9fa;
+  background: rgba(10, 10, 20, 0.8);
   padding: 20px 0;
   text-align: center;
-  color: #6c757d;
+  color: var(--light-text);
 }
 
 footer .footer-nav ul {
@@ -297,14 +319,14 @@ footer .footer-nav ul li {
 }
 
 footer .footer-nav ul li a {
-  color: #343a40;
+  color: #f0f0ff;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 footer .footer-nav ul li a:hover {
-  color: #007bff;
+  color: #fff;
 }
 
 footer p {
@@ -330,6 +352,7 @@ footer p {
     justify-content: center;
   }
 }
+
 /* Hero Section */
 .hero-section {
   display: flex;
@@ -459,12 +482,13 @@ footer p {
 }
 
 .skills-list li {
-  background: #f0f0ff;
-  color: #333;
+  background:#1a62e0,#6d409c;
+  color:#e0e0ff;
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   font-size: 0.9rem;
 }
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -473,7 +497,7 @@ footer p {
 }
 
 .skill-category {
-  background: #f9f9f9;
+  background:#2575fc,#6a11cb;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -482,4 +506,10 @@ footer p {
 
 .skill-category:hover {
   transform: translateY(-5px);
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

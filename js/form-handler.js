@@ -3,7 +3,7 @@
 // =============================
 
 // Select the form element
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.querySelector('.contact-form-element');
 
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
@@ -34,9 +34,13 @@ if (contactForm) {
 
     try {
       // Example: Sending via Formspree (no backend needed)
+      // Make sure this URL matches the one in your Formspree dashboard!
       const response = await fetch('https://formspree.io/f/mjkbzldo', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
         body: JSON.stringify({ name, email, message })
       });
 
