@@ -1,0 +1,29 @@
+{
+  "name": "personal-profile-website",
+  "version": "1.0.0",
+  "description": "My personal profile static website",
+  "scripts": {
+    "start": "vercel dev",
+    "build": "echo 'Static site - no build needed'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anandha Murugan <your-953622243008@ritrjpm.ac.in>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anandha-02/personal-profile-web.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anandha-02/personal-profile-web/issues"
+  },
+  "homepage": "https://github.com/Anandha-02/personal-profile-web#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {
+    "@remix-run/node": "^1.12.0",
+    "@remix-run/react": "^1.12.0",
+    "@remix-run/serve": "^1.12.0"
+  }
+}
